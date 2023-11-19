@@ -4,7 +4,8 @@ const cors = require('@fastify/cors');
 const db = require('./config/dbConnect');
 const routes = require('./routes/ScoreRoutes');
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
+const host = 'RENDER' in process.env ? `0.0.0.0` : `localhost`;
 
 const app = fastify({ logger: true });
 
