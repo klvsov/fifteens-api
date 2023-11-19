@@ -2,7 +2,7 @@ const fastify = require('fastify');
 const cors = require('@fastify/cors');
 
 const db = require('./config/dbConnect');
-const routes = require('./routes/ScoreRoutes');
+const routes = require('./app/routes/ScoreRoutes');
 
 const PORT = process.env.PORT || 3000;
 
