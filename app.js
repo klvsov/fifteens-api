@@ -5,7 +5,6 @@ const db = require('./config/dbConnect');
 const routes = require('./routes/ScoreRoutes');
 
 const PORT = process.env.PORT || 3000;
-const host = 'RENDER' in process.env ? `0.0.0.0` : `localhost`;
 
 const app = fastify({ logger: true });
 
@@ -20,7 +19,7 @@ routes.forEach((route) => {
 
 const start = () => {
   app
-    .listen({ host, port: PORT })
+    .listen({ port: PORT })
     .then((address) => {
       console.log(`server listening on ${address}`);
     })
