@@ -20,7 +20,7 @@ routes.forEach((route) => {
 
 const start = () => {
   app
-    .listen({ port: PORT })
+    .listen({ host, port: PORT })
     .then((address) => {
       console.log(`server listening on ${address}`);
     })
