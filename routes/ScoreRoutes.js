@@ -1,16 +1,9 @@
+const express = require('express');
 const scoreController = require('../controllers/ScoreController');
 
-const routes = [
-  {
-    method: 'GET',
-    url: '/api/scores',
-    handler: scoreController.getBestScores,
-  },
-  {
-    method: 'POST',
-    url: '/api/scores',
-    handler: scoreController.createScore,
-  },
-];
+const router = express.Router();
 
-module.exports = routes;
+router.get('/api/scores', scoreController.getBestScores);
+router.post('/api/scores', scoreController.createScore);
+
+module.exports = router;
