@@ -7,7 +7,7 @@ const scoreRouter = require('./routes/ScoreRoutes');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 const mongoDBUri = process.env.MONGODB_URI;
 
 app.use(cors());
